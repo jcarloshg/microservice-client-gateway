@@ -4,10 +4,16 @@ This project is an **API Gateway** developed with **NestJS** that centralizes an
 
 ## Index
 
+- [The microservices to connect 🔗](#the-microservices-to-connect)
 - [Main features ✨](#main-features-)
 - [Project's structure 🗂️](#projects-structure-)
 - [Environment Variables 🌱](#environment-variables-)
 - [Execute ▶️](#execute-)
+
+## The microservices to connect 🔗
+
+- [Microservice of products 📦](https://github.com/jcarloshg/microservices_products)
+- [Microservice of orders 🧾](https://github.com/jcarloshg/microservices_orders)
 
 ## Main features ✨
 
@@ -69,3 +75,4 @@ Configura el archivo `.env` basado en `.env.template` para definir:
    ```zsh
    npm run start:dev
    ```
+4. Import the [endpoint](DOCS/endpoints.json) to `Postman`
