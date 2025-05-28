@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "f73170e3-d183-4f9f-b652-b96c93e83aff",
+		"name": "client-gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9874211"
+	},
+	"item": [
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"totalAmount\": 5000,\n    \"totalItems\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/orders",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product_dev}}/api/orders/d076639a-23ee-4ec7-a1f3-93ea2a36cbc7",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"d076639a-23ee-4ec7-a1f3-93ea2a36cbc7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{product_dev}}/api/orders",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/orders",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"PENDING\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/orders/d076639a-23ee-4ec7-a1f3-93ea2a36cbc7",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"d076639a-23ee-4ec7-a1f3-93ea2a36cbc7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"new camera\",\n    \"price\": 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/products",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPagination",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/products?page=1&limit=5",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/products",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/products/10",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"CHALE 01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/products/22",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{product_dev}}/api/products/53",
+							"host": [
+								"{{product_dev}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"53"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
